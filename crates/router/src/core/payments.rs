@@ -11504,6 +11504,9 @@ where
 
     core_routing::log_connectors("eligibility", &final_connectors);
 
+    let final_connectors = routing::cost_based::apply_cost_aware_routing(final_connectors);
+    core_routing::log_connectors("cost-aware", &final_connectors);
+
     let connector_data = final_connectors
         .into_iter()
         .map(|conn| {
