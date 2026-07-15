@@ -1,3 +1,16 @@
+> **Reviewer Notes**
+>
+> This submission implements a **Cost-Aware Routing** strategy for Hyperswitch that reorders eligible payment connectors based on configured processing cost before connector execution.
+>
+> For a quick evaluation, please review the following documents in order:
+>
+> 1. **docs/routing-design.md** – Architecture, design decisions, and implementation approach
+> 2. **DECISIONS.md** – Design trade-offs, assumptions, limitations, and future improvements
+> 3. **docs/demo-guide.md** – Step-by-step guide to reproduce the feature locally
+> 4. **postman/Cost-Aware-Routing.postman_collection.json** – Ready-to-use API collection for the demo
+>
+> The implementation focuses on **minimal changes to the existing routing pipeline**, keeping the feature isolated, testable, and easy to extend with configurable connector costs in the future.
+> 
 <p align="center">
   <img src="./docs/imgs/hyperswitch-logo-dark.svg#gh-dark-mode-only" alt="Hyperswitch-Logo" width="40%" />
   <img src="./docs/imgs/hyperswitch-logo-light.svg#gh-light-mode-only" alt="Hyperswitch-Logo" width="40%" />
@@ -41,18 +54,16 @@
 <details>
 <summary><strong>📁 Table of Contents</strong></summary>
 
-- [What Can I Do with Hyperswitch?](#-what-can-i-do-with-hyperswitch)
-- [Quickstart (Local Setup)](#-quickstart-local-setup)
-- [Cloud Deployment](#cloud-deployment)
-- [Hosted Sandbox (No Setup Required)](#hosted-sandbox-no-setup-required)
-- [Why Hyperswitch?](#-why-hyperswitch)
-- [Architectural Overview](#architectural-overview)
-- [Our Vision](#our-vision)
-- [Community & Contributions](#community--contributions)
-- [Feature Requests & Bugs](#feature-requests--bugs)
-- [Versioning](#versioning)
-- [License](#copyright-and-license)
-- [Team Behind Hyperswitch](#team-behind-hyperswitch)
+- [Quickstart](#quickstart)
+- [Why Hyperswitch?](#why-hyperswitch)
+- [Supported Connectors](#supported-connectors)
+- [Hyperswitch Ecosystem Mapping](#hyperswitch-ecosystem-mapping)
+  - [1. Core backend services](#1-core-backend-services)
+  - [2. Dashboard](#2-dashboard)
+  - [3. Web checkout SDKs](#3-web-checkout-sdks)
+  - [4. Mobile SDKs](#4-mobile-sdks)
+  - [5. Deployment \& infrastructure](#5-deployment--infrastructure)
+- [Contributing](#contributing)
 
 </details>
 
