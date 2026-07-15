@@ -1,4 +1,5 @@
 use hyperswitch_domain_models::mandates;
+pub mod cost_based;
 mod transformers;
 pub mod utils;
 #[cfg(all(feature = "v1", feature = "dynamic_routing"))]
